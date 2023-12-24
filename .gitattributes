@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+lib/libcublas.so.11 filter=lfs diff=lfs merge=lfs -text
+lib/libcublasLt.so.11 filter=lfs diff=lfs merge=lfs -text
