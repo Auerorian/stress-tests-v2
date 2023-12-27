@@ -8,7 +8,7 @@ import time
 
 SINCE = "today"
 SERIAL_NUM = ""
-LOCAL_USER = "/home/$USER"
+LOCAL_USER = os.getenv('SUDO_USER') or os.getenv('USER')
 PATTERNS = r"bin/PATTERNS"
 IGNORE_PATTERNS = r"bin/IGNORE_PATTERNS"
 
