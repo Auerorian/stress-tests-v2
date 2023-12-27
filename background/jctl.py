@@ -8,9 +8,9 @@ import time
 
 SINCE = "today"
 SERIAL_NUM = ""
-LOCAL_USER = "your_local_user"  # Replace with the actual local user
-PATTERNS = r"your_patterns_regex"  # Replace with the actual patterns regex
-IGNORE_PATTERNS = r"your_ignore_patterns_regex"  # Replace with the actual ignore patterns regex
+LOCAL_USER = "/home/$USER"
+PATTERNS = r"bin/PATTERNS"
+IGNORE_PATTERNS = r"bin/IGNORE_PATTERNS"
 
 
 # Function to handle cleanup
