@@ -4,7 +4,7 @@ import re
 import signal
 import tempfile
 import time
-from sys import exit
+import sys
 
 #make a way to input the s/n in the app.py and import or something into the "SERIAL_NUM" here and in other python scripts
 SINCE = "today"
@@ -39,10 +39,10 @@ def write_to_log_file(data):
         log_file.write(data)
 
 while True:
-    journal_process = subprocess.Popen(["sudo", "journalctl", f"--since={SINCE}"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    journal_process = subprocess.Popen(["sudo", "journalctl", f"--since={SINCE}"], stdout=open(temp_journal), stderr=subprocess.PIPE)
 
     journal_stdout, journal_stderr = journal_process.communicate()
-
+    journal_content = journal_stdout.decode() if journal_stdout is not None else ""
     if journal_stderr:
         print(f"Error running journalctl: {journal_stderr.decode()}")
 
