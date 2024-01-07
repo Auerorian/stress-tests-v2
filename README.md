@@ -1,10 +1,10 @@
 # stress-tests-v2
-This is a "re-make"of Jacob Kaulike's stress-scripts which is not public :)
+This is a re-make of Jacob Kaulike's stress-scripts which is not in a public repo :)
 
-The Intent is to have a maintained app to "ship" with Pop_OS! installs (pre-shipped) for System76 Build team. This app is for stress-testing systems and providing the customer with a finished file showing the results. For build team, we want an interactive application to replace the original terminal windows. 
+The Intent is to have a maintained app in "pre-shipped" ISOs for Pop_OS! for the System76 Build team and RMA team. This app is for stress-testing systems and providing the customer with a finished file showing the results. For the Build team, we want an interactive application to replace the original terminal windows. 
 
-We would also like to replace some current methods of testing with our own. Like replacing Unigine super position with something open source for AMD systems.
+MOST COMMITS WON'T HAPPEN UNTIL I HAVE MORE DONE! THEN THIS WILL BE REMOVED
 
-A good portion of the code used here will probably be a mash up of the original code. For example, "sudomodule.py" was written by Jacob Kaulike. I would like to give credit where due as I am dumb as shit. :)
+We would also like to replace some current methods of testing with our own. Like replacing Unigine superposition with something more open source for AMD systems. Or just creating my own.
 
-Everything should be pre-built and maintained on a at minimum, weekly basis. For example, updating gpu-burn, python modules, intel/amd dev-id's, and so on.
+I am considering making items like GPU-Burn pre-compiled. Not sure yet. Intel/AMD dev-id's, would need to be added with new releases
