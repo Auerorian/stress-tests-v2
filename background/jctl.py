@@ -38,11 +38,10 @@ def write_to_log_file(data):
     with open(log_file_path, "a") as log_file:
         log_file.write(data)
 
+
 while True:
     journal_process = subprocess.Popen(["sudo", "journalctl", f"--since={SINCE}"], stdout=open(temp_journal), stderr=subprocess.PIPE)
-
-    journal_stdout, journal_stderr = journal_process.communicate()
-    journal_content = journal_stdout.decode() if journal_stdout is not None else ""
+    
     if journal_stderr:
         print(f"Error running journalctl: {journal_stderr.decode()}")
 

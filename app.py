@@ -33,26 +33,23 @@ def create_tab(notebook, text):
 root =tk.Tk()
 root.title("System76 testing")
 
-#screen dimensions
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
-#initial geometry for the window based on display
-#probably doesn't need to be this big bu t we will see.
 root.geometry(f"{screen_width}x{screen_height}")
 root.resizable(True, True)
 
 notebook = ttk.Notebook(root)
 
-create_tab(notebook, "Temps")
-create_tab(notebook, "Tab 2")
+
+#do I want to not do tabs? or maybe not have everythign spread out
+create_tab(notebook, "Temperature monitor", tk.Text(text="hi"))
+create_tab(notebook, "Journalctl")
 create_tab(notebook, "Tab 3")
 
 notebook.pack(fill='both', expand=True)
 
-#widget example
 label = tk.Label(root, text="Hello, world!")
-#'pack' is used for displaying widgets nicely (suppossedly)
 label.pack
 
 button = tk.Button(root, text="Start all testing", command=lambda: print("bing bong"))
@@ -60,6 +57,5 @@ button.pack()
 
 check_window_size()
 
-# start the Tkinter event loop and listen for events
 root.mainloop()
 
